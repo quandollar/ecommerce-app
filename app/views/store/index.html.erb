@@ -20,7 +20,8 @@
           <!-- sanitize allows admin to safely add HTML stylings to description, https://owasp.org/www-community/attacks/xss/ -->
           <p><%= sanitize(product.description) %></p>
           <div class="mt-3">
-            <%= product.price %>
+            <!-- apply a helper method to format price -->
+            <%= number_to_currency(product.price) %>
           </div>
         </div>
 
