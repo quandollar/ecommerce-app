@@ -24,9 +24,8 @@ class LineItemsController < ApplicationController
   # POST /line_items or /line_items.json
   def create
     product = Product.find(params[:product_id])
-
-    # build method creates a new line item relationship between the @cart object and the product
-    @line_item = @cart.line_items.build(product: product)
+    
+    @line_item = @cart.add_product(product)
 
     respond_to do |format|
       if @line_item.save
