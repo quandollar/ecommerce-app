@@ -1,0 +1,14 @@
+/* The @keyframes directive defines an animation, in this case named line-itemhighlight */
+@keyframes line-item-highlight {
+    0% {
+        background: #8f8;
+        }
+    100% {
+        background: none;
+        }
+    }
+
+    /* define a CSS class named line-item-highlight that edits the animation above */
+    .line-item-highlight {
+        animation: line-item-highlight 1s;
+    }
