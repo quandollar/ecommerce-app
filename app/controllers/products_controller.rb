@@ -40,6 +40,11 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to product_url(@product), notice: "Product was successfully updated." }
         format.json { render :show, status: :ok, location: @product }
+        
+        # broadcast the HTML for a product every time an update is made
+        # broadcast_replace_later_to() helps messages go out asyncronously
+        @product.broadcast_replace_later_to 'products', partial: 'store/product'
+
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
