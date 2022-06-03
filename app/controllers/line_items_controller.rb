@@ -29,6 +29,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
+        format.turbo_stream
+        # if the request does not accept turbo stream (eg JS is disabled), redirect users to the store
         format.html { redirect_to store_index_url }
         format.json { render :show, status: :created, location: @line_item }
       else
