@@ -11,10 +11,11 @@ It was built using the following technologies:
 
 ## Quick Demo
 
-We start with the app's homepage after we have created an account and signed in.
-![homepage](https://raw.githubusercontent.com/quandollar/tweet_scheduler/main/app/assets/images/1-homepage.png)
+The homepage:
+![homepage](https://github.com/quandollar/ecommerce-app/blob/main/app/assets/images/home.png)
 
-Once connected to Twitter through their API and authorizing the Twitter app, we're taken to the Twitter Accounts page. Here, we can connect to more Twitter accounts as needed or disconnect existing accounts.
-![accounts](https://raw.githubusercontent.com/quandollar/tweet_scheduler/main/app/assets/images/2-twitter.png)
+Items can be added to cart that lives on the sidebar and dynamically gets updated with changes in quantity. 
+Customers can also clear their cart and start over.
+![add_to_cart](https://github.com/quandollar/ecommerce-app/blob/main/app/assets/images/add%20to%20cart.gif)
 
-*All due credits go to [Chris Oliver](https://twitter.com/excid3), my Ruby on Rails sensei.*
+*Credits*
