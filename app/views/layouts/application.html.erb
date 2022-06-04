@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ecommerce App</title>
+    <title>DogFooding</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,6 +9,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= favicon_link_tag asset_path('icons8-doggy-bag-64.png') %>
   </head>
 
   <body>
@@ -16,7 +18,7 @@
     <header class="bg-white">
       <div class="flex">
       <%= image_tag 'icons8-doggy-bag-64.png', alt: 'TheDogfoodingStore', class: "h-10 w-10 m-5" %>
-      <div class="text-2xl self-center font-bold">TheDogfoodingStore</div>
+      <div class="text-2xl self-center font-bold">DogFooding</div>
       </div>
       <h1><%= @page_title %></h1>
     </header>
@@ -28,9 +30,7 @@
         <%= render partial: 'layouts/cart', locals: { cart: @cart } %>
         <ul class="text-black leading-8 mt-5">
           <li><a href="/">Home</a></li>
-          <li><a href="/questions">Questions</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <%= link_to "About", about_path %>
         </ul>
       </nav>
 
