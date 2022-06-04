@@ -24,11 +24,20 @@ class OrdersController < ApplicationController
 
   # POST /orders or /orders.json
   def create
+    # create a new order from the from data
     @order = Order.new(order_params)
+
+    # add the items in cart into this order
+    @order.add_line_items_from_cart(@cart)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to order_url(@order), notice: "Order was successfully created." }
+
+        # empty the cart if order submission succeeds
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+
+        format.html { redirect_to store_index_url, notice: "Your order has been confirmed." }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new, status: :unprocessable_entity }
