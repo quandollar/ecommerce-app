@@ -1,7 +1,7 @@
 /* The @keyframes directive defines an animation, in this case named line-itemhighlight */
 @keyframes line-item-highlight {
     0% {
-        background: #8f8;
+        background: #E5E4E2;
         }
     100% {
         background: none;
