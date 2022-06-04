@@ -8,52 +8,36 @@
 #---
 # encoding: utf-8
 Product.delete_all
-Product.create!(title: 'Docker for Rails Developers',
+Product.create!(title: 'Organic Chicken & Sweet Potato',
   description:
     %{<p>
-      <em>Build, Ship, and Run Your Applications Everywhere</em> Docker does
-      for DevOps what Rails did for web development—it gives you a new set
-      of superpowers. Gone are “works on my machine” woes and lengthy setup
-      tasks, replaced instead by a simple, consistent, Docker-based
-      development environment that will have your team up and running in
-      seconds.  Gain hands-on, real-world experience with a tool that’s
-      rapidly becoming fundamental to software development. Go from zero all
-      the way to production as Docker transforms the massive leap of
-      deploying your app in the cloud into a baby step.
+      Our Chicken, Brown Rice, and Sweet Potato kibble recipe is expertly 
+      formulated and nutritionist-approved for dogs of any age. Our 
+      clean-label dry dog food contains premium proteins like organic 
+      chicken, patented probiotics, and a host of functional superfoods.
       </p>},
-  image_url: 'ridocker.jpg',
-  price: 19.95)
+  image_url: 'organic-chicken-sweet-potato.jpg',
+  price: 29.99)
 # . . .
-Product.create!(title: 'Design and Build Great Web APIs',
+Product.create!(title: 'Grain-Free Organic Chicken & Carrot',
   description:
     %{<p>
-      <em>Robust, Reliable, and Resilient</em>
-      APIs are transforming the business world at an increasing pace. Gain
-      the essential skills needed to quickly design, build, and deploy
-      quality web APIs that are robust, reliable, and resilient. Go from
-      initial design through prototyping and implementation to deployment of
-      mission-critical APIs for your organization. Test, secure, and deploy
-      your API with confidence and avoid the “release into production”
-      panic. Tackle just about any API challenge with more than a dozen
-      open-source utilities and common programming patterns you can apply
-      right away.
+      Our grain-free Chicken, Sweet Potato, and Carrot kibble recipe is 
+      expertly formulated and nutritionist-approved for dogs of any age. Our 
+      clean-label dry dog food contains premium proteins like organic chicken, 
+      patented probiotics, and functional superfoods.
       </p>},
-  image_url: 'maapis.jpg',
-  price: 24.95)
+  image_url: 'grain-free-organic-chicken.jpg',
+  price: 27.99)
 # . . .
 
-Product.create!(title: 'Modern CSS with Tailwind',
+Product.create!(title: 'Salmon & Sweet Potato',
   description:
     %{<p>
-      <em>Flexible Styling Without the Fuss</em>
-      Tailwind CSS is an exciting new CSS framework that allows you to
-      design your site by composing simple utility classes to create complex
-      effects. With Tailwind, you can style your text, move your items on
-      the page, design complex page layouts, and adapt your design for
-      devices from a phone to a wide-screen monitor. With this book, you’ll
-      learn how to use the Tailwind for its flexibility and its consistency,
-      from the smallest detail of your typography to the entire design of
-      your site.
+      Our Salmon, Brown Rice, and Sweet Potato kibble recipe is expertly 
+      formulated for dogs of all ages and nutritionist-approved. Our 
+      clean-label dry dog food contains premium proteins like real salmon, 
+      patented probiotics, and a host of functional superfoods.
       </p>},
-  image_url: 'tailwind.jpg',
-  price: 18.95)
+  image_url: 'salmon-sweet-potato.jpg',
+  price: 33.99)
