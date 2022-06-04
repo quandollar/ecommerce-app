@@ -26,10 +26,25 @@
     <%= form.email_field :email, class: "input-field" %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order.pay_types.keys, 
-      { prompt: 'Select a payment method' }, class: "input-field" %>
+  <!-- leverage stimulus to dynamically show addl fields based on selection -->
+  <!-- see the payment controller for logic -->
+  <div data-controller="payment">
+    <div class="my-5">
+      <%= form.label :pay_type %>
+      
+      <!-- identify this form.select as the payment controller's selection target,  -->
+      <!-- then name a method to be called when the selection changes -->
+      <%= form.select :pay_type, Order.pay_types.keys, 
+        { prompt: 'Select a payment method' }, class: "input-field",
+        'data-payment-target' => 'selection',
+        'data-action' => 'payment#showAdditionalFields' %>
+    </div>
+
+    <!-- payment controller will show/hide partials depending on the pay type selection -->
+    <!-- (locals help pass local variables into partials (vs controller instance variables)) -->
+    <%= render partial: 'check', locals: { form: form } %>
+    <%= render partial: 'cc', locals: { form: form } %>
+    <%= render partial: 'po', locals: { form: form } %>
   </div>
 
   <div class="inline">
