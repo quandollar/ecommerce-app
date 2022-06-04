@@ -17,6 +17,7 @@ class Order < ApplicationRecord
             # disassociate the line item from the cart instance so that
             # the item doesn't get destroy when we destroy the cart
             item.cart_id = nil
+            # add item itself to the line_items collection for the order
             line_items << item
         end
     end
