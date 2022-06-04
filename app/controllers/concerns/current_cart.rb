@@ -1,9 +1,9 @@
 # Rails concern allows us to share codes in this module among controllers
+# this method helps us persist the shopping cart in a session
 module CurrentCart
 
     private
 
-    # this method helps us persist the shopping cart in a session
     def set_cart
         # get the cart_id from the session object and then find a cart corresponding to this ID
         @cart = Cart.find(session[:cart_id])
