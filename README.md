@@ -13,6 +13,7 @@ It was built using the following technologies:
 
 The homepage:
 ![homepage](https://github.com/quandollar/ecommerce-app/blob/main/app/assets/images/home.png)
+*(Yes, the name [DogFooding](https://www.makeuseof.com/what-is-dogfooding/) was picked on purpose. Too good of an opportunity to pass up!)*
 
 We can add, edit, and delete products by navigating to /products. In the real world, this should be
 guarded behind a user authentication system that permits admin users only.
